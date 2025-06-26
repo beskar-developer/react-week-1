@@ -50,7 +50,7 @@ const fields: Array<Field> = [
   },
 ];
 
-export const useLoginForm = (onSubmit: Props["onSubmit"]) => {
+const useLoginForm = (onSubmit: Props["onSubmit"]) => {
   const { handleSubmit, control, formState } = useForm<FormValues>({
     mode: "onChange",
     defaultValues: {
@@ -63,3 +63,5 @@ export const useLoginForm = (onSubmit: Props["onSubmit"]) => {
 
   return { fields, formState, control, submitForm };
 };
+
+export default useLoginForm;

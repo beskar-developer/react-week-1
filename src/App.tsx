@@ -1,4 +1,4 @@
-import Playground from "@/views/ToDoList.view";
+import Playground from "@/views/Playground.view";
 
 const App = () => {
   return <Playground />;
