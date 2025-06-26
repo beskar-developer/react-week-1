@@ -1,18 +1,11 @@
-import type { MouseEvent } from "react";
-
-interface Props extends ComponentProps<"button"> {
-  label?: string;
-  loading?: boolean;
-}
+import type { Props } from "./BaseButton.type";
 
 export const BaseButton = ({ label, children, className, disabled, loading, ...props }: Props) => {
-  const onClick = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-
-    if (disabled || loading) return;
-
-    props.onClick?.(event);
-  };
+  const { onClick } = useBaseButton({
+    disabled,
+    loading,
+    onClick: props.onClick,
+  });
 
   return (
     <button
