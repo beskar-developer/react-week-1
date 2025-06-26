@@ -12,18 +12,24 @@ const AUTO_IMPORT_CONFIG = {
   include: [JS_FILE_PATTERN],
   imports: [
     "react",
-    { from: "react", imports: ["ComponentProps", "ReactNode", "SyntheticEvent"], type: true },
+    {
+      from: "react",
+      imports: ["ComponentProps", "ReactNode", "SyntheticEvent", "FragmentProps"],
+      type: true,
+    },
     {
       "react-hook-form": ["Controller", "useForm"],
-      react: ["StrictMode"],
+      react: ["StrictMode", "createContext"],
     },
   ],
   dirs: [
     "./packages/shared-vendor/hooks/**",
     "./packages/shared-vendor/utils/**",
     "./packages/shared-vendor/components/**/*",
+    "./packages/shared-vendor/providers/**",
     "./src/hooks/**",
     "./src/components/**/*",
+    "./src/providers/**",
   ],
   dirsScanOptions: {
     filePatterns: [".ts", ".tsx", ".js", ".jsx"],
