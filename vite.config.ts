@@ -4,6 +4,7 @@ import AutoImportPlugin from "unplugin-auto-import/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
 
 const ENV_DIRECTORY = "./env";
 const JS_FILE_PATTERN = /\.[tj]sx?$/;
@@ -35,8 +36,6 @@ const AUTO_IMPORT_CONFIG = {
     "./packages/shared-vendor/components/**/*",
     "./packages/shared-vendor/providers/**",
     "./src/hooks/**",
-    "./src/components/**/*",
-    "./src/providers/**",
   ],
   dirsScanOptions: {
     filePatterns: [".ts", ".tsx", ".js", ".jsx"],
@@ -54,6 +53,6 @@ export default ({ mode = "dev" } = {}) => {
 
   return defineConfig({
     envDir: ENV_DIRECTORY,
-    plugins: [react(), AutoImportPlugin(AUTO_IMPORT_CONFIG), tsconfigPaths(), tailwindcss()],
+    plugins: [react(), AutoImportPlugin(AUTO_IMPORT_CONFIG), tsconfigPaths(), tailwindcss(), svgr()],
   });
 };
