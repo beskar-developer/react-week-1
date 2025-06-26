@@ -14,7 +14,14 @@ const AUTO_IMPORT_CONFIG = {
     "react",
     {
       from: "react",
-      imports: ["ComponentProps", "ReactNode", "SyntheticEvent", "FragmentProps"],
+      imports: [
+        "ComponentProps",
+        "ReactNode",
+        "SyntheticEvent",
+        "FragmentProps",
+        "JSXElementConstructor",
+        "PropsWithChildren",
+      ],
       type: true,
     },
     {

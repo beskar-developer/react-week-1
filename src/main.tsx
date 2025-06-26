@@ -10,6 +10,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <Compose components={[ThemeModeProvider]}>
+      <App />
+    </Compose>
   </StrictMode>,
 );

@@ -17,17 +17,15 @@ const App = () => {
   };
 
   return (
-    <ThemeModeProvider>
-      <div className="scrollbar flex flex-col items-center justify-center gap-8 overflow-x-hidden bg-indigo-50 p-8 align-middle dark:bg-gray-900">
-        <ThemeToggleButton />
+    <div className="scrollbar flex flex-col items-center justify-center gap-8 overflow-x-hidden bg-indigo-50 p-8 align-middle dark:bg-gray-900">
+      <ThemeToggleButton />
 
-        <ProfileCard {...PROFILE_PROPS} />
+      <ProfileCard {...PROFILE_PROPS} />
 
-        <Counter count={count} onCountChange={setCount} min={0} max={20} />
+      <Counter count={count} onCountChange={setCount} min={0} max={20} />
 
-        <LoginForm onSubmit={onSubmit} />
-      </div>
-    </ThemeModeProvider>
+      <LoginForm onSubmit={onSubmit} />
+    </div>
   );
 };
 
