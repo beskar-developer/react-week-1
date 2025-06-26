@@ -1,4 +1,5 @@
 import { ThemeModeContext } from "@shared-vendor/contexts";
+import type { ThemeMode } from "@shared-vendor/types";
 
 const DARK_CLASS = "dark";
 const DARK_MEDIA_QUERY = `(prefers-color-scheme: ${DARK_CLASS})`;
@@ -10,7 +11,10 @@ const addDarkClass = () => document.body.classList.add(DARK_CLASS);
 export const ThemeModeProvider = ({ children }: FragmentProps) => {
   const isDarkPreferred = matchMedia(DARK_MEDIA_QUERY).matches;
 
-  const [mode, setMode] = usePersistState(() => (isDarkPreferred ? "DARK" : "LIGHT"), "THEME_MODE");
+  const [mode, setMode] = usePersistState<ThemeMode>(
+    () => (isDarkPreferred ? "DARK" : "LIGHT"),
+    "THEME_MODE",
+  );
 
   const isDark = mode === "DARK";
   const isLight = !isDark;

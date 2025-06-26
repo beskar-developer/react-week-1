@@ -1,10 +1,4 @@
-type Context = {
-  mode: string;
-  isDark: boolean;
-  isLight: boolean;
-  toggleMode: () => void;
-  setMode: React.Dispatch<React.SetStateAction<string>>;
-};
+import type { ThemeModeContext as Context } from "@shared-vendor/types";
 
 const DEFAULT_CONTEXT: Context = {
   mode: "DARK",

@@ -1,11 +1,11 @@
-import { ThemeModeContext } from "@shared-vendor/contexts";
+import { CONTEXT_ERROR_MESSAGE } from "@shared-vendor/constants";
 
-const ERROR_MESSAGE = "Provider is not used or the useThemeMode is called outside of provider!";
+import { ThemeModeContext } from "@shared-vendor/contexts";
 
 export const useThemeMode = () => {
   const context = useContext(ThemeModeContext);
 
-  if (!context) throw new Error(ERROR_MESSAGE);
+  if (!context) throw new Error(CONTEXT_ERROR_MESSAGE);
 
   return context;
 };
