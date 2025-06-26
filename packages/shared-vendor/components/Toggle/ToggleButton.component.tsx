@@ -15,7 +15,7 @@ export const ToggleButton = ({ label, value, onValueChange, disabled }: Props) =
 
   return (
     <div className={`flex items-center justify-between gap-2 ${disabled ? DISABLED_CLASS : ""}`}>
-      {label && <span className="text-bold dark:text-white">{label}</span>}
+      {label && <span className="dark:text-white">{label}</span>}
 
       <div
         className={`relative flex h-7 w-16 cursor-pointer items-center rounded-full border-2 transition ${TRACK_CLASS_MAP[state]}`}

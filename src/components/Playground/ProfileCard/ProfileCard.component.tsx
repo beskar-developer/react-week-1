@@ -6,7 +6,7 @@ interface Props {
 
 export const ProfileCard = ({ name, image, description }: Props) => {
   return (
-    <Card className="w-80">
+    <Card className="w-80" scale>
       <ImageLoader src={image} className="size-80" />
 
       <div className="flex flex-col gap-2 p-3">

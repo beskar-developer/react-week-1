@@ -15,7 +15,7 @@ export const Counter = ({ count, min, max, onCountChange }: Props) => {
       </BaseButton>
 
       <input
-        className="text-bold w-16 text-center text-xl dark:text-white"
+        className="w-16 text-center text-xl dark:text-white"
         type="number"
         value={count}
         dir="ltr"

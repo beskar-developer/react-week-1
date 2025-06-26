@@ -25,7 +25,7 @@ export const ImageLoader = ({
     <div {...props} className={`${className ?? ""} flex items-center justify-center overflow-hidden`}>
       {isActiveState("LOADING") && <Loading className="size-8 text-indigo-600" />}
       {isActiveState("ERROR") &&
-        (fallback || <p className="text-bold text-indigo-600 dark:text-indigo-300">{errorMessage}</p>)}
+        (fallback || <p className="text-indigo-600 dark:text-indigo-300">{errorMessage}</p>)}
       {isActiveState("IDLE") && (
         <img
           src={src}

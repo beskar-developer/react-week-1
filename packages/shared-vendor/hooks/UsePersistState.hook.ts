@@ -6,8 +6,12 @@ const toValue = (value: unknown) => {
   return value;
 };
 
-export const usePersistState = (initialState: unknown, key: string, storage = localStorage) => {
-  const [value, setValue] = useState(() => {
+export const usePersistState = <T>(
+  initialState: T | (() => T),
+  key: string,
+  storage = localStorage,
+): [T, React.Dispatch<React.SetStateAction<T>>] => {
+  const [value, setValue] = useState<T>(() => {
     const storedValue = storage.getItem(key);
 
     return storedValue || toValue(initialState);

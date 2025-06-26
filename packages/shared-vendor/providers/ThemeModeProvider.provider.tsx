@@ -1,4 +1,4 @@
-import ThemeModeContext from "@/contexts/ThemeMode.context";
+import { ThemeModeContext } from "@shared-vendor/contexts";
 
 const DARK_CLASS = "dark";
 const DARK_MEDIA_QUERY = `(prefers-color-scheme: ${DARK_CLASS})`;
@@ -17,7 +17,7 @@ export const ThemeModeProvider = ({ children }: FragmentProps) => {
 
   const toggleMode = useCallback(() => setMode(isDark ? "LIGHT" : "DARK"), [isDark, setMode]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!isDark) {
       removeDarkClass();
 
