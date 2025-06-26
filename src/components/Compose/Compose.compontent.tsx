@@ -3,9 +3,7 @@ interface Props {
   children: ReactNode;
 }
 
-export const Compose = (props: Props) => {
-  const { components = [], children } = props;
-
+export const Compose = ({ components = [], children }: Props) => {
   return (
     <>
       {components.reduceRight((acc, Comp) => {
