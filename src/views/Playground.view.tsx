@@ -1,5 +1,7 @@
 import type { FormValues } from "@/components/Playground/Form/LoginForm.type";
 
+import { LoginForm, ProfileCard } from "@/components/Playground";
+
 const PROFILE_PROPS = {
   name: "یک فرد رندم",
   image: "https://picsum.photos/id/1/400/400",

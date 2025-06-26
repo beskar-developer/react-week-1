@@ -4,7 +4,7 @@ interface Props {
   description: string;
 }
 
-export const ProfileCard = ({ name, image, description }: Props) => {
+const ProfileCard = ({ name, image, description }: Props) => {
   return (
     <Card className="w-80" scale>
       <ImageLoader src={image} className="size-80" />
@@ -17,3 +17,5 @@ export const ProfileCard = ({ name, image, description }: Props) => {
     </Card>
   );
 };
+
+export default ProfileCard;

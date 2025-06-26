@@ -1,6 +1,6 @@
 import type { Props } from "./LoginForm.type";
 
-export const LoginForm = ({ onSubmit }: Props) => {
+const LoginForm = ({ onSubmit }: Props) => {
   const { fields, formState, control, submitForm } = useLoginForm(onSubmit);
 
   return (
@@ -39,3 +39,5 @@ export const LoginForm = ({ onSubmit }: Props) => {
     </Card>
   );
 };
+
+export default LoginForm;
