@@ -73,6 +73,12 @@
   }
 }
 
+@layer components {
+  .app-container {
+    @apply min-h-screen overflow-x-hidden bg-indigo-50 p-8 dark:bg-gray-900;
+  }
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
