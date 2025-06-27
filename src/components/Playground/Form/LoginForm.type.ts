@@ -7,7 +7,7 @@ export interface Props {
   onSubmit: (payload: FormValues) => void;
 }
 
-type FieldName = "nationalCode" | "mobileNumber";
+type FieldName = keyof FormValues;
 
 export type Field = {
   name: FieldName;

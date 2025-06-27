@@ -3,6 +3,10 @@ import type { Field, FormValues, Props } from "./LoginForm.type";
 const REQUIRED_RULE_MESSAGE = "این فیلد الزامی است";
 const INVALID_NATIONAL_CODE_MESSAGE = "کد ملی معتر نمی باشد";
 const INVALID_MOBILE_NUMBER_MESSAGE = "شماره موبایل معتبر نمی باشد";
+const INITIAL_FORM_VALUES: FormValues = {
+  nationalCode: "",
+  mobileNumber: "",
+};
 
 const validateMobileNumber = (value: string) => {
   if (!value || String(value).match(/^(09)[0-9]{9}$|^(۰۹)[۰۱۲۳۴۵۶۷۸۹]{9}$|^(٠٩)[٩٨٧٦٥٤٣٢١٠]{9}$/))
@@ -53,10 +57,7 @@ const fields: Array<Field> = [
 const useLoginForm = (onSubmit: Props["onSubmit"]) => {
   const { handleSubmit, control, formState } = useForm<FormValues>({
     mode: "onChange",
-    defaultValues: {
-      nationalCode: "",
-      mobileNumber: "",
-    },
+    defaultValues: INITIAL_FORM_VALUES,
   });
 
   const submitForm = handleSubmit(onSubmit);
