@@ -1,5 +1,3 @@
-import CheckSvg from "@shared-vendor/assets/svg/check-small.svg?react";
-
 import type { Props, State } from "./Checkbox.type";
 
 const BUTTON_CLASSES: Record<State, string> = {
@@ -20,7 +18,7 @@ export const Checkbox = ({ value, label, disabled, strikeLabel, onValueChange }:
       <div
         className={`${BUTTON_CLASSES[state]} ${disabled ? "cursor-not-allowed opacity-55 grayscale-50" : ""} m-4 flex size-4.5 shrink-0 items-center justify-center rounded-sm border-2`}
       >
-        {value && <CheckSvg />}
+        <CheckTick state={state} />
       </div>
 
       {label && <span className={`${hasStrike ? "line-through" : ""}`}>{label}</span>}
