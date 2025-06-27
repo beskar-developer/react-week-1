@@ -1,7 +1,7 @@
-import Playground from "@/views/Playground.view";
+import ToDoList from "./views/ToDoList.view";
 
 const App = () => {
-  return <Playground />;
+  return <ToDoList />;
 };
 
 export default App;
