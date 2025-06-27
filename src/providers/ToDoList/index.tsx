@@ -7,6 +7,7 @@ const ToDoListProvider = ({ children }: FragmentProps) => {
   const [tasks, setTasks] = usePersistState<Array<ITask>>([], "TASKS");
   const [action, setAction] = useState<TaskAction>("ADD");
   const [selectedTaskId, setSelectedTaskId] = useState("");
+  const { items: searchedTasks, searchedValue, setSearchedValue } = useSearch<ITask>(tasks, "text");
 
   const addTask = (text: string) => setTasks((tasks) => [...tasks, new Task(text)]);
 
@@ -44,7 +45,9 @@ const ToDoListProvider = ({ children }: FragmentProps) => {
   };
 
   const value = {
-    tasks,
+    tasks: searchedTasks,
+    searchedValue,
+    setSearchedValue,
     action,
     selectedTaskId,
     addTask,

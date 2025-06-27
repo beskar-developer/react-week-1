@@ -5,7 +5,7 @@ type FormValues = {
 type Field = {
   name: keyof FormValues;
   label: string;
-  rules: object;
+  rules?: object;
 };
 
 const fields: Array<Field> = [

@@ -1,4 +1,4 @@
-import { ActionForm, TaskList } from "@/components/ToDoList";
+import { ActionForm, SearchField, TaskList } from "@/components/ToDoList";
 
 const ToDoList = () => {
   return (
@@ -10,11 +10,17 @@ const ToDoList = () => {
           <TaskList />
         </Card>
 
-        <Card className="flex max-h-min flex-col gap-8 p-6">
-          <ThemeToggleButton />
+        <div className="flex max-h-min flex-col gap-4">
+          <Card className="flex flex-col gap-8 p-6">
+            <ThemeToggleButton />
 
-          <ActionForm />
-        </Card>
+            <SearchField />
+          </Card>
+
+          <Card className="p-6">
+            <ActionForm />
+          </Card>
+        </div>
       </div>
     </div>
   );
