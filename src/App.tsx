@@ -1,4 +1,4 @@
-import ToDoList from "./views/ToDoList.view";
+import ToDoList from "@/views/ToDoList.view";
 
 const App = () => {
   return <ToDoList />;
