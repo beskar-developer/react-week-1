@@ -32,7 +32,7 @@ export const validateNationalCode = (value: string) => {
 };
 
 export const validateMinLength = (value: string, amount: number) => {
-  const hasValidLength = value.split("").length > amount - 1;
+  const hasValidLength = value.length > amount - 1;
 
   if (!value || hasValidLength) return;
 
