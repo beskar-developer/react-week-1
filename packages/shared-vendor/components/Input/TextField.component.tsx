@@ -5,17 +5,18 @@ interface Props extends ComponentProps<"input"> {
   hint?: string;
   errorMessage?: string;
   messageFallback?: ReactNode;
-  onValueChange: React.Dispatch<React.SetStateAction<string>>;
+  onValueChange: (value: string) => void;
 }
 
 export const TextField = ({
+  name,
   label,
+  labelFallback,
   hint,
   errorMessage,
   messageFallback,
-  labelFallback,
-  name,
   disabled,
+  value,
   onValueChange,
   ...props
 }: Props) => {
@@ -35,6 +36,7 @@ export const TextField = ({
           type="text"
           id={name}
           disabled={disabled}
+          value={value}
           onChange={(event) => onValueChange(event.target.value)}
         />
       </div>
