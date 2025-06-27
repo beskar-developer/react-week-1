@@ -26,8 +26,14 @@ const AUTO_IMPORT_CONFIG = {
       type: true,
     },
     {
+      from: "motion",
+      imports: ["MotionProps"],
+      type: true,
+    },
+    {
       "react-hook-form": ["Controller", "useForm"],
       react: ["StrictMode", "createContext"],
+      "motion/react-client": [["*", "motion"]],
     },
   ],
   dirs: [
