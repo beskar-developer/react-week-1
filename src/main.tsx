@@ -5,6 +5,8 @@ import ToDoListProvider from "@/providers/ToDoList/index.tsx";
 
 import { VersionLogger } from "@shared-vendor/helpers/index.js";
 
+import "@shared-vendor/assets/style/index.css";
+
 VersionLogger.log();
 
 const rootElement = document.getElementById("root")!;
