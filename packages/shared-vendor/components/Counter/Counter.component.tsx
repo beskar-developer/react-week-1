@@ -10,7 +10,7 @@ export const Counter = ({ count, min, max, onCountChange }: Props) => {
 
   return (
     <div className="flex items-center gap-4">
-      <BaseButton className="size-8" disabled={isBiggerThanMax} onClick={increment}>
+      <BaseButton className="!size-8" disabled={isBiggerThanMax} onClick={increment}>
         +
       </BaseButton>
 
@@ -22,7 +22,7 @@ export const Counter = ({ count, min, max, onCountChange }: Props) => {
         onChange={(event) => onCountChange(+event.target.value)}
       />
 
-      <BaseButton className="size-8" disabled={isLesserThanMin} onClick={decrement}>
+      <BaseButton className="!size-8" disabled={isLesserThanMin} onClick={decrement}>
         -
       </BaseButton>
     </div>

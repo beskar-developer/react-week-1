@@ -23,7 +23,7 @@ const ActionForm = () => {
         />
       ))}
 
-      <BaseButton disabled={!formState.isValid} label={buttonLabel} className="h-10" onClick={submitForm} />
+      <BaseButton disabled={!formState.isValid} label={buttonLabel} onClick={submitForm} />
     </form>
   );
 };

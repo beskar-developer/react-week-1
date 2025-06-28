@@ -31,7 +31,6 @@ const LoginForm = ({ onSubmit }: Props) => {
 
         <BaseButton
           label="ورود"
-          className="h-10"
           disabled={!formState.isValid}
           loading={formState.isSubmitting}
           onClick={submitForm}

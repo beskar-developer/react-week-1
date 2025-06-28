@@ -12,7 +12,7 @@ export const BaseButton = ({ label, children, className, disabled, loading, ...p
       {...props}
       onClick={onClick}
       disabled={disabled}
-      className={`${className ?? ""} flex h-8 cursor-pointer items-center justify-center rounded-md bg-indigo-500 p-2 text-center text-sm text-white transition select-none hover:scale-[105%] hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-55`}
+      className={`${className ?? ""} flex h-10 cursor-pointer items-center justify-center rounded-md bg-indigo-500 p-2 text-center text-sm text-white transition select-none hover:scale-[105%] hover:bg-indigo-400 disabled:cursor-not-allowed disabled:opacity-55`}
     >
       {loading ? <Loading /> : children || label}
     </button>
