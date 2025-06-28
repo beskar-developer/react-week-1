@@ -1,3 +1,7 @@
 packages:
-  - "."
-  - "packages/*"
+  - .
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - esbuild
