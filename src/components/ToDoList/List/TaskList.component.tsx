@@ -14,7 +14,7 @@ const TaskList = () => {
   const { tasks, hasTasks } = useTaskList();
 
   return (
-    <motion.ul className="size-full">
+    <motion.ul className="size-full divide-y-1 divide-indigo-500">
       {hasTasks ? (
         tasks.map((task) => (
           <motion.li {...ANIMATION_CONFIG} key={task.id}>

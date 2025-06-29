@@ -6,7 +6,7 @@ const ToDoList = () => {
       <h1 className="text-center text-3xl font-black text-indigo-500 dark:text-indigo-200">Todo List</h1>
 
       <div className="grid w-full gap-4 sm:w-100 sm:grid-cols-1 md:w-160 md:grid-cols-[1.4fr_1fr]">
-        <Card className="flex flex-col divide-y-1 divide-indigo-500 p-6">
+        <Card className="p-6">
           <TaskList />
         </Card>
 
