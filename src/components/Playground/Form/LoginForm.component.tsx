@@ -16,6 +16,7 @@ const LoginForm = ({ onSubmit }: Props) => {
             {...register(name, rules)}
             label={label}
             errorMessage={errors[name]?.message}
+            disabled={isSubmitting}
             key={name}
           />
         ))}

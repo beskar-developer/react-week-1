@@ -6,7 +6,13 @@ const ActionForm = () => {
   return (
     <form className="flex flex-col gap-8" onSubmit={submitForm}>
       {fields.map(({ name, rules, label }) => (
-        <TextField {...register(name, rules)} label={label} errorMessage={errors[name]?.message} key={name} />
+        <TextField
+          {...register(name, rules)}
+          label={label}
+          errorMessage={errors[name]?.message}
+          disabled={isSubmitting}
+          key={name}
+        />
       ))}
 
       <BaseButton loading={isSubmitting} label={buttonLabel} />
