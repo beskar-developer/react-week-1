@@ -29,14 +29,17 @@ const fields: Array<Field> = [
 ];
 
 const useLoginForm = (onSubmit: Props["onSubmit"]) => {
-  const { handleSubmit, control, formState } = useForm<FormValues>({
-    mode: "onChange",
+  const {
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    register,
+  } = useForm<FormValues>({
     defaultValues: INITIAL_FORM_VALUES,
   });
 
   const submitForm = handleSubmit(onSubmit);
 
-  return { fields, formState, control, submitForm };
+  return { fields, errors, isSubmitting, register, submitForm };
 };
 
 export default useLoginForm;

@@ -28,8 +28,13 @@ const INITIAL_FORM_VALUES: FormValues = {
 const useActionForm = () => {
   const { tasks, selectedTaskId, action, addTask, editTask } = useToDoListContext();
 
-  const { control, formState, reset, setValue, handleSubmit } = useForm<FormValues>({
-    mode: "onChange",
+  const {
+    formState: { errors, isSubmitting },
+    register,
+    reset,
+    setValue,
+    handleSubmit,
+  } = useForm<FormValues>({
     defaultValues: INITIAL_FORM_VALUES,
   });
 
@@ -60,7 +65,7 @@ const useActionForm = () => {
   };
   const submitForm = handleSubmit(executeAction);
 
-  return { fields, control, formState, buttonLabel, submitForm };
+  return { fields, errors, isSubmitting, buttonLabel, register, submitForm };
 };
 
 export default useActionForm;

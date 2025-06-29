@@ -31,7 +31,7 @@ const AUTO_IMPORT_CONFIG = {
       type: true,
     },
     {
-      "react-hook-form": ["Controller", "useForm"],
+      "react-hook-form": ["useForm"],
       react: ["StrictMode", "createContext"],
       "motion/react-client": [["*", "motion"]],
     },
