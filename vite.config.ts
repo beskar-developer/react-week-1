@@ -34,6 +34,7 @@ const AUTO_IMPORT_CONFIG = {
       "react-hook-form": ["useForm"],
       react: ["StrictMode", "createContext"],
       "motion/react-client": [["*", "motion"]],
+      "motion/react": ["AnimatePresence"],
     },
   ],
   dirs: [
