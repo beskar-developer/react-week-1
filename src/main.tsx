@@ -14,7 +14,7 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <Compose components={[ThemeModeProvider, ToDoListProvider]}>
+    <Compose components={[ThemeModeProvider, ErrorBoundary, ToDoListProvider]}>
       <App />
     </Compose>
   </StrictMode>,
