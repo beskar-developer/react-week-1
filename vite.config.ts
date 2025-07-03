@@ -35,6 +35,7 @@ const AUTO_IMPORT_CONFIG = {
       react: ["StrictMode", "createContext"],
       "motion/react-client": [["*", "motion"]],
       "motion/react": ["AnimatePresence"],
+      "tailwind-merge": ["twMerge"],
     },
   ],
   dirs: [
