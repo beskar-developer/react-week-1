@@ -36,6 +36,7 @@ export default tseslint.config(
       // react rules
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-hooks/exhaustive-deps": ["off"],
 
       // js rules
       "no-debugger": "off",
