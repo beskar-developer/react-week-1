@@ -49,7 +49,7 @@ const useActionForm = () => {
     }
 
     reset();
-  }, [isEditAction, selectedTask, reset, setValue]);
+  }, [isEditAction, selectedTask]);
 
   const buttonLabel = action === "ADD" ? "افزودن" : "ویرایش";
 

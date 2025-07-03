@@ -21,7 +21,7 @@ const LoginForm = ({ onSubmit }: Props) => {
           />
         ))}
 
-        <BaseButton label="ورود" loading={isSubmitting} />
+        <BaseButton loading={isSubmitting}>ورود</BaseButton>
       </form>
     </Card>
   );

@@ -13,7 +13,7 @@ const Task = ({ id }: Props) => {
 
       <div className="flex gap-2">
         {actions.map(({ Component, name, ...props }) => (
-          <Component {...props} key={name} />
+          <Component key={name} {...props} />
         ))}
       </div>
     </div>

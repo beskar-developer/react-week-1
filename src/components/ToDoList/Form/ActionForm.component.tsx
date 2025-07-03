@@ -15,7 +15,7 @@ const ActionForm = () => {
         />
       ))}
 
-      <BaseButton loading={isSubmitting} label={buttonLabel} />
+      <BaseButton loading={isSubmitting}>{buttonLabel}</BaseButton>
     </form>
   );
 };
