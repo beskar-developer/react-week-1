@@ -56,11 +56,23 @@ const AUTO_IMPORT_CONFIG = {
   },
 };
 
+const REACT_CONFIG = {
+  babel: {
+    plugins: [["babel-plugin-react-compiler"], {}],
+  },
+};
+
 export default ({ mode = "dev" } = {}) => {
   process.env = { ...process.env, ...loadEnv(mode, ENV_DIRECTORY, "") };
 
   return defineConfig({
     envDir: ENV_DIRECTORY,
-    plugins: [react(), AutoImportPlugin(AUTO_IMPORT_CONFIG), tsconfigPaths(), tailwindcss(), svgr()],
+    plugins: [
+      react(REACT_CONFIG),
+      AutoImportPlugin(AUTO_IMPORT_CONFIG),
+      tsconfigPaths(),
+      tailwindcss(),
+      svgr(),
+    ],
   });
 };
