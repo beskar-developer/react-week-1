@@ -6,7 +6,7 @@ import type { Props } from "./Task.type";
 const useTask = (id: Props["id"]) => {
   const { tasks, changeActionToEdit, deleteTask, selectedTaskId, setTaskIsDone } = useToDoListContext();
 
-  const task = findByKey(tasks, id);
+  const task = findByKey(tasks, id)!;
 
   const isSelected = id === selectedTaskId;
 
